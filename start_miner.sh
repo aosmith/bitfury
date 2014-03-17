@@ -7,17 +7,17 @@ _IP=$(hostname -I) || true
 # Default env variables
 POOL1_ADDRESS=stratum.mining.eligius.st
 POOL1_PORT=3334
-POOL1_USER=16w7KMdGcrkomRCkiVLVhXnQK3bXQKWz2b_"$_IP"
+POOL1_USER=16w7KMdGcrkomRCkiVLVhXnQK3bXQKWz2b_"$_IP"test
 POOL1_PASS=x
 
 # If this is a restart we need to kill existing processes
-if [ -z "$MINER_RUNNING" ]; then
-  echo "Killing miner and proxies..."
-  screen -wipe miner
-  screen -wipe stratum1
-  screen -wipe stratum2
-  screen -wipe stratum3
-fi
+# if [ -z "$MINER_RUNNING" ]; then
+#  echo "Killing miner and proxies..."
+#  screen -wipe miner
+#  screen -wipe stratum1
+#  screen -wipe stratum2
+#  screen -wipe stratum3
+#fi
 
 echo "Updating code and settings..."
 cd /miner && git pull
