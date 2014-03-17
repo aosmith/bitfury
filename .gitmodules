@@ -1,0 +1,3 @@
+[submodule "stratum-mining-proxy"]
+	path = stratum-mining-proxy
+	url = https://github.com/slush0/stratum-mining-proxy.git
