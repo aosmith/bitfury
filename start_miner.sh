@@ -7,7 +7,7 @@ _IP=$(hostname -I) || true
 # Default env variables
 POOL1_ADDRESS=stratum.mining.eligius.st
 POOL1_PORT=3334
-POOL1_USER=16w7KMdGcrkomRCkiVLVhXnQK3bXQKWz2b_"$_IP"test
+POOL1_USER=16w7KMdGcrkomRCkiVLVhXnQK3bXQKWz2b_"$_IP"
 POOL1_PASS=x
 
 # If this is a restart we need to kill existing processes
