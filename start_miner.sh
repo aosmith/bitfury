@@ -5,9 +5,9 @@ sleep 20
 _IP=$(hostname -I) || true
 
 # Default env variables
-POOL1_ADDRESS=stratum.mining.eligius.st
-POOL1_PORT=3334
-POOL1_USER=16w7KMdGcrkomRCkiVLVhXnQK3bXQKWz2b_"$_IP"
+POOL1_ADDRESS=uk1.ghash.io
+POOL1_PORT=3333
+POOL1_USER=CoinSeed."`echo $_IP | tr '.' 'x'`"
 POOL1_PASS=x
 
 # If this is a restart we need to kill existing processes
@@ -22,8 +22,8 @@ POOL1_PASS=x
 echo "Updating code and settings..."
 cd /miner && git pull
 
-echo "Loading environment variables..."
-. /miner/settings.conf
+# echo "Loading environment variables..."
+# . /miner/settings.conf
 
 
 echo "Starting proxy..."
