@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This section blocks until github.com responds to a single ping.
 while true
 do
   ping -c 1 github.com
@@ -7,16 +8,10 @@ do
     echo "Network available"
     break;
   else
-    echo "Network not up yet..."
-    sleep 5
+    echo "Network not up, retrying."
+    sleep 1
   fi
 done
-
-
-_IP=$(hostname -I)
-
-
-
 
 echo "Updating code and settings..."
 cd /miner && git pull
