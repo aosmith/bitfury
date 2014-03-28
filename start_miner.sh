@@ -1,8 +1,21 @@
 #!/bin/bash
 
-sleep 20
+while true
+do
+  ping -c 1 github.com
+  if [[ $? == 0 ]]; then
+    echo "Network available"
+    break;
+  else
+    echo "Network not up yet..."
+    sleep 5
+  fi
+done
 
-_IP=$(hostname -I) || true
+
+_IP=$(hostname -I)
+
+
 
 
 echo "Updating code and settings..."
